@@ -100,8 +100,9 @@ class LeafletMapItemViewer extends CustomItemViewer {
         const latitude = row.getValue('Latitude')[0];
         const longitude = row.getValue('Longitude')[0];
         const tooltip = row.getValue('Tooltip')[0];
+        const latlgn = [latitude, longitude];
         if (!this.mapViewer && latitude !== null && longitude !== null) {
-          this.mapViewer = L.map(mapDiv).setView([latitude, longitude], 8);
+          this.mapViewer = L.map(mapDiv).setView(latlgn, 6);
           L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution:
               'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
@@ -109,7 +110,7 @@ class LeafletMapItemViewer extends CustomItemViewer {
           }).addTo(this.mapViewer);
         }
         if (!latitude || !longitude) return;
-        const marker = L.marker([latitude, longitude]);
+        const marker = L.marker(latlgn);
         marker.addTo(this.mapViewer).on('click', () => {
           this.setMasterFilter(row);
         });
