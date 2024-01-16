@@ -110,7 +110,9 @@ class LeafletMapItemViewer extends CustomItemViewer {
         }
         if (!latitude || !longitude) return;
         const marker = L.marker([latitude, longitude]);
-        marker.addTo(this.mapViewer);
+        marker.addTo(this.mapViewer).on('click', () => {
+          this.setMasterFilter(row);
+        });
         if (tooltip) marker.bindPopup(`<b>${tooltip}</b>`);
       });
     }
