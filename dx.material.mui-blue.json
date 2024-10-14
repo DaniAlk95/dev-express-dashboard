@@ -1,0 +1,34 @@
+{
+    "items": [
+        {
+            "key": "$base-accent",
+            "value": "rgba(32, 101, 209, 1)"
+        },
+        {
+            "key": "$base-warning",
+            "value": "rgba(255, 171, 0, 1)"
+        },
+        {
+            "key": "$base-danger",
+            "value": "rgba(255, 86, 48, 1)"
+        },
+        {
+            "key": "$base-success",
+            "value": "rgba(34, 197, 94, 1)"
+        },
+        {
+            "key": "$base-hover-color",
+            "value": "rgba(144, 157, 171, 0.08)"
+        },
+        {
+            "key": "$base-focus-bg",
+            "value": "rgba(145, 158, 171, 0.24)"
+        }
+    ],
+    "baseTheme": "material.blue.light",
+    "outputColorScheme": "mui-blue",
+    "makeSwatch": true,
+    "version": "24.1.6",
+    "widgets": [],
+    "removeExternalResources": true
+}
